@@ -1,0 +1,76 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+.clock{
+    position: relative;
+    box-sizing: border-box;
+    height: 500px;
+    width: 500px;
+    top: 50px;
+    left: 50px;
+    justify-content: center;
+    background: radial-gradient(rgb(58, 52, 52),black);
+    border: solid 30px rgb(47, 35, 35);
+    border-radius: 50%;
+}
+.center{
+    border: solid 3px rgb(194, 194, 204);
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    background-color: rgb(14, 15, 15);
+    border-radius: 50%;
+    top:48%;
+    left: 48%;
+    z-index: 1;
+}
+.hour{
+    position: relative;
+    height: 140px;
+    width: 7px;
+    top:50%;
+    left: 50%;
+    border: solid 3px rgb(200, 200, 206);
+    background-color: rgb(8, 9, 8);
+    animation: movearound 500s linear infinite;
+    transform-origin:top;
+    border-radius: 10px;
+    
+}
+.minute{
+    position: absolute;
+    height: 170px;
+    width: 7px;
+    top:50%;
+    left: 50%;
+    background-color: rgb(7, 7, 7);
+    animation: movearound 100s linear infinite;
+    transform-origin:top;
+    border-radius: 10px;
+    border:solid 2px red
+}
+.second{
+    position: absolute;
+    height: 200px;
+    width: 7px;
+    top:50%;
+    left: 50%;
+    background-color: rgb(16, 15, 15);
+    animation: movearound 10s linear infinite;
+    transform-origin:top;
+    border-radius: 10px;
+    border:solid 2px rgb(6, 240, 111)
+}
+@keyframes movearound {
+    from{
+        transform: rotate(0deg);
+
+    }
+    to{
+        transform: rotate(360deg);
+
+    }
+    
+}
